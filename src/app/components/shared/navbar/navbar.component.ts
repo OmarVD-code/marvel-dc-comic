@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
+  templateUrl: './navbar.component.html'
 })
 export class NavbarComponent implements OnInit {
 
@@ -13,7 +13,6 @@ export class NavbarComponent implements OnInit {
   }
 
   buscarHeroe(term: string){
-    // console.log(term);
     this.router.navigate(['/buscar', term]);
   }
 
