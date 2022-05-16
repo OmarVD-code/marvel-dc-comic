@@ -12,10 +12,6 @@ body {
   height: 60PX;
 }
 
-.card-columns { 
-  column-count: 5;
-}
-
 .card-img-top {
   cursor: pointer;
 }
@@ -47,4 +43,36 @@ body {
   
 .fadeIn {
   animation-name: fadeIn;
+}
+
+.card-columns {
+  column-count: 4;
+}
+
+/* RESPONSIVE */
+@media (min-width: 769px) and (max-width: 1024px)
+{
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px)
+{
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px)
+{
+    .card-columns {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
 }
