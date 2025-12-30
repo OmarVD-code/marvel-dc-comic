@@ -12,6 +12,11 @@ body {
   height: 60PX;
 }
 
+.img-logo-2 {
+  width: 120PX;
+  height: 60PX;
+}
+
 .card-img-top {
   cursor: pointer;
 }
