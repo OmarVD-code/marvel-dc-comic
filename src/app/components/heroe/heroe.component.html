@@ -1,30 +1,59 @@
-<h1>
-  {{ heroe.name | uppercase }}
-  <small>({{ heroe.dob }})</small>
-</h1>
-<hr />
-<div class="row animated fadeIn fast">
-  <div class="col-md-4">
-    <img [src]="heroe.image" [alt]="heroe.name" class="img-fluid" />
-    <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-block mt-3"
-      >Back</a
-    >
+<!-- Skeleton / Loader -->
+<div *ngIf="loading" class="animated fadeIn">
+  <div class="mb-3 skeleton skeleton-title"></div>
+  <div class="mb-3 skeleton skeleton-subtitle"></div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="skeleton skeleton-img mb-3"></div>
+      <div class="skeleton skeleton-btn"></div>
+    </div>
+    <div class="col-md-8">
+      <div class="skeleton skeleton-line"></div>
+      <div class="skeleton skeleton-line"></div>
+      <div class="skeleton skeleton-line"></div>
+      <div class="skeleton skeleton-line w-75"></div>
+      <div class="skeleton skeleton-logo mt-4"></div>
+    </div>
   </div>
-  <div class="col-md-8">
-    <p style="text-align: justify">
-      {{ heroe.bio }}
-    </p>
-    <img
-      *ngIf="heroe.home == 'MARVEL'"
-      class="img-logo-2"
-      src="assets/img/marvel-logo.png"
-      alt="Marvel"
-    />
-    <img
-      *ngIf="heroe.home == 'DC'"
-      class="img-logo-2"
-      src="assets/img/dc-logo.jpg"
-      alt="DC"
-    />
+</div>
+
+<!-- Error -->
+<div *ngIf="!loading && error" class="alert alert-danger">
+  {{ error }}
+</div>
+
+<!-- Content -->
+<div *ngIf="!loading && heroe">
+  <h1>
+    {{ heroe.name | uppercase }}
+    <small>({{ heroe.dob }})</small>
+  </h1>
+  <hr />
+  <div class="row animated fadeIn fast">
+    <div class="col-md-4">
+      <img [src]="heroe.image" [alt]="heroe.name" class="img-fluid" />
+      <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-block mt-3"
+        >Back</a
+      >
+    </div>
+    <div class="col-md-8">
+      <p style="text-align: justify">
+        {{ heroe.bio }}
+      </p>
+
+      <img
+        *ngIf="heroe.home == 'MARVEL'"
+        class="img-logo-2"
+        src="assets/img/marvel-logo.png"
+        alt="Marvel"
+      />
+      <img
+        *ngIf="heroe.home == 'DC'"
+        class="img-logo-2"
+        src="assets/img/dc-logo.jpg"
+        alt="DC"
+      />
+    </div>
   </div>
 </div>

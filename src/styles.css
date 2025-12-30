@@ -28,24 +28,24 @@ body {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-  
+
 .fast {
   -webkit-animation-duration: 0.4s;
   animation-duration: 0.4s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-  
+
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
-  
+
   to {
     opacity: 1;
   }
 }
-  
+
 .fadeIn {
   animation-name: fadeIn;
 }
@@ -55,29 +55,77 @@ body {
 }
 
 /* RESPONSIVE */
-@media (min-width: 769px) and (max-width: 1024px)
-{
-    .card-columns {
-        -webkit-column-count: 3;
-        -moz-column-count: 3;
-        column-count: 3;
-    }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card-columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
 }
 
-@media (min-width: 576px) and (max-width: 768px)
-{
-    .card-columns {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
-    }
+@media (min-width: 576px) and (max-width: 768px) {
+  .card-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
 }
 
-@media (min-width: 320px) and (max-width: 575px)
-{
-    .card-columns {
-        -webkit-column-count: 1;
-        -moz-column-count: 1;
-        column-count: 1;
-    }
+@media (min-width: 320px) and (max-width: 575px) {
+  .card-columns {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #eeeeee 25%, #f5f5f5 37%, #eeeeee 63%);
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.2s ease-in-out infinite;
+  border-radius: 6px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.skeleton-title {
+  height: 34px;
+  width: 60%;
+}
+
+.skeleton-subtitle {
+  height: 18px;
+  width: 25%;
+}
+
+.skeleton-img {
+  height: 280px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.skeleton-btn {
+  height: 38px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.skeleton-line {
+  height: 14px;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.skeleton-logo {
+  height: 55px;
+  width: 160px;
+  border-radius: 10px;
 }
