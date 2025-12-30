@@ -8,9 +8,7 @@ export class HeroesService {
 
   private API_URL = environment.apiUrl;
 
-  constructor(private http: HttpClient) {
-    console.log('Servicio listo para usar!!! (AWS)');
-  }
+  constructor(private http: HttpClient) {}
 
   // GET /heroes
   getHeroes(): Observable<Heroe[]> {

@@ -16,7 +16,6 @@ export class HeroeTarjetaComponent implements OnInit {
   }
 
   verHeroe(){
-    console.log(this.index);
     this.router.navigate(['/heroes/heroe',this.index]);
   }
 }
