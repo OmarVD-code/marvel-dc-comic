@@ -1,5 +1,5 @@
 # Marvel vs DC - App
-#### Sitio web para conocer un poco más acerca de los superhéroes más populares de Marvel y DC 
+#### Sitio web hecho con Angular 11 y API Gateway
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
