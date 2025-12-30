@@ -8,8 +8,7 @@ import { Router } from '@angular/router';
 export class HeroeTarjetaComponent implements OnInit {
 
   @Input() heroe:any = {};
-  @Input() index:number = 0;
-
+  @Input() index:String = "";
 
   constructor(private router:Router) {}
 
@@ -17,6 +16,7 @@ export class HeroeTarjetaComponent implements OnInit {
   }
 
   verHeroe(){
+    console.log(this.index);
     this.router.navigate(['/heroes/heroe',this.index]);
   }
 }

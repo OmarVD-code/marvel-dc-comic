@@ -2,7 +2,7 @@
 <hr />
 <div class="card-columns animated fadeIn">
   <!--*ngFor="let heroe of heroes; let i = index"-->
-  <app-heroe-tarjeta [heroe]="heroe" [index]="i" *ngFor="let heroe of heroes; let i = index"></app-heroe-tarjeta>
+  <app-heroe-tarjeta [heroe]="heroe" [index]="heroe.heroId" *ngFor="let heroe of heroes"></app-heroe-tarjeta>
 </div>
   
 
