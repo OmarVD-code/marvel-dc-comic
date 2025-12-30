@@ -6,7 +6,6 @@ import { environment } from 'src/environments/environment';
 @Injectable()
 export class HeroesService {
 
-  // 👇 Pega aquí tu Invoke URL de API Gateway (sin / al final)
   private API_URL = environment.apiUrl;
 
   constructor(private http: HttpClient) {
@@ -22,9 +21,6 @@ export class HeroesService {
   getHeroe(heroId: string): Observable<Heroe> {
     return this.http.get<Heroe>(`${this.API_URL}/heroes/${heroId}`);
   }
-
-  // (Opcional) búsqueda en frontend: tu componente puede filtrar la lista
-  // Si quieres mantener el método, lo hacemos en el componente para no duplicar llamadas.
 }
 
 export interface Heroe {
