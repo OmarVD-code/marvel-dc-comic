@@ -8,7 +8,7 @@ export class HeroesService {
 
   private API_URL = environment.apiUrl;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   // GET /heroes
   getHeroes(): Observable<Heroe[]> {
@@ -18,6 +18,15 @@ export class HeroesService {
   // GET /heroes/{heroId}
   getHeroe(heroId: string): Observable<Heroe> {
     return this.http.get<Heroe>(`${this.API_URL}/heroes/${heroId}`);
+  }
+
+  searchHeroe(term: string): Observable<Heroe[]> {
+    return this.http.get<Heroe[]>(
+      `${this.API_URL}/heroes/search`,
+      {
+        params: { term }
+      }
+    );
   }
 }
 
