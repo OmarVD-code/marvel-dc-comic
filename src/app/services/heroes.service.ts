@@ -12,12 +12,12 @@ export class HeroesService {
     console.log('Servicio listo para usar!!! (AWS)');
   }
 
-  // ✅ GET /heroes
+  // GET /heroes
   getHeroes(): Observable<Heroe[]> {
     return this.http.get<Heroe[]>(`${this.API_URL}/heroes`);
   }
 
-  // ✅ GET /heroes/{heroId}
+  // GET /heroes/{heroId}
   getHeroe(heroId: string): Observable<Heroe> {
     return this.http.get<Heroe>(`${this.API_URL}/heroes/${heroId}`);
   }
