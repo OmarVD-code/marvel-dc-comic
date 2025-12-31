@@ -11,7 +11,7 @@
   <app-heroe-tarjeta [heroe]="heroe" [index]="heroe.heroId" *ngFor="let heroe of heroes"></app-heroe-tarjeta>
 </div>
 
-<div *ngIf="heroes.length == 0" class="animated fadeIn fast">
+<div *ngIf="!loading && heroes.length == 0" class="animated fadeIn fast">
   <div class="alert alert-info" role="alert">
     No results for search: {{ term }}
   </div>
