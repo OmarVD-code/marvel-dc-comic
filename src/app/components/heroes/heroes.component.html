@@ -1,19 +1,12 @@
 <h1>Superheroes <small>Marvel & DC</small></h1>
 <hr />
 
-<!-- SKELETON -->
 <div *ngIf="loading" class="card-columns">
   <div class="card skeleton-card" *ngFor="let s of [1,2,3,4,5,6]">
     <div class="skeleton-img"></div>
-    <!-- <div class="card-body">
-      <div class="skeleton-title"></div>
-      <div class="skeleton-text"></div>
-      <div class="skeleton-text short"></div>
-    </div> -->
   </div>
 </div>
 
-<!-- DATA REAL -->
 <div *ngIf="!loading" class="card-columns animated fadeIn">
   <app-heroe-tarjeta
     *ngFor="let heroe of heroes"
