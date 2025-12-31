@@ -1,5 +1,5 @@
 # Marvel vs DC - App
-#### Sitio web hecho con Angular 11 y API Gateway
+#### Sitio web hecho con Angular 11, Api Gateway, Lambda, S3 y CloudFront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
