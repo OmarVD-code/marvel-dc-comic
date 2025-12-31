@@ -9,12 +9,19 @@ import { Router } from '@angular/router';
 export class HeroesComponent implements OnInit {
 
   heroes: Heroe[] = [];
+  loading: boolean = true;
 
   constructor(private _heroesService: HeroesService, private router: Router) { }
 
   ngOnInit(): void {
-    this._heroesService.getHeroes().subscribe(heroes => {
-      this.heroes = heroes;
+    this._heroesService.getHeroes().subscribe({
+      next: (heroes) => {
+        this.heroes = heroes;
+        this.loading = false;
+      },
+      error: () => {
+        this.loading = false;
+      }
     });
   }
 
